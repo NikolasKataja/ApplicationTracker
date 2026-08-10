@@ -1,5 +1,5 @@
 package com.applicationtracker.web;
-
+import org.springframework.web.bind.annotation.CrossOrigin;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +15,7 @@ import org.springframework.http.ResponseEntity;
 import com.applicationtracker.domain.Application;
 import com.applicationtracker.repository.ApplicationRepository;
 
+@CrossOrigin(origins = "http://localhost:5173") // Allow requests from the frontend
 @RestController
 @RequestMapping("/api/applications")
 public class ApplicationController {
