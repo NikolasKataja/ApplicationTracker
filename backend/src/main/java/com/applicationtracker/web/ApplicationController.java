@@ -52,6 +52,11 @@ public class ApplicationController {
                     application.setCompany(updatedApplication.getCompany());
                     application.setPosition(updatedApplication.getPosition());
                     application.setLocation(updatedApplication.getLocation());
+                    application.setNotes(updatedApplication.getNotes());
+                    application.setJobUrl(updatedApplication.getJobUrl());
+                    application.setApplicationDate(updatedApplication.getApplicationDate());
+                    application.setStatus(updatedApplication.getStatus());
+
                     Application savedApplication = repository.save(application);
                     return ResponseEntity.ok(savedApplication);
                 })
