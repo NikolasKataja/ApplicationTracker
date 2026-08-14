@@ -3,6 +3,7 @@ import type { Application } from "./types/Application";
 import "./App.css";
 
 import StatCard from "./components/StatCard";
+import ApplicationTable from "./components/ApplicationTable";
 
 function App() {
 
@@ -44,15 +45,7 @@ function App() {
         <StatCard title="Rejected" value={rejectedApplications} />
       </section>
 
-
-      {applications.map(application => (
-        <div key={application.id}>
-          <p>{application.company}</p>
-          <p>{application.location}</p>
-          <p>{application.position}</p>
-          <p>{application.status}</p>
-        </div>
-      ))}
+      <ApplicationTable applications={applications} />
 
     </div>
   )

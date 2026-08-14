@@ -72,3 +72,77 @@ body {
     flex-direction: column;
   }
 }
+
+.application-section {
+    margin-top: 36px;
+}
+
+.application-section h2 {
+    margin: 0 0 16px;
+    font-size: 22px;
+}
+
+.application-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #191c22;
+    border: 1px solid #2a2e36;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.application-table th,
+.application-table td {
+    padding: 16px 18px;
+    text-align: left;
+    border-bottom: 1px solid #2a2e36;
+}
+
+.application-table th {
+    color: #9ca3af;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.application-table td {
+    font-size: 15px;
+}
+
+.application-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.application-table tbody tr:hover {
+    background: #1f232b;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.status-APPLIED {
+    background: rgba(59, 130, 246, 0.14);
+    color: #93c5fd;
+}
+
+.status-INTERVIEWING {
+    background: rgba(234, 179, 8, 0.14);
+    color: #fde68a;
+}
+
+.status-OFFERED {
+    background: rgba(34, 197, 94, 0.14);
+    color: #86efac;
+}
+
+.status-REJECTED {
+    background: rgba(239, 68, 68, 0.14);
+    color: #fca5a5;
+}
