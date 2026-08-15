@@ -30,6 +30,9 @@ body {
 
 .add-application-button {
     border: 0;
+    background: #1fec6e;
+    border-color: #1fec6e;
+    color: #191c22;
     border-radius: 10px;
     padding: 12px 18px;
     font-size: 16px;

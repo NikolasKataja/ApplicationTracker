@@ -1,0 +1,165 @@
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    z-index: 1000;
+}
+
+.modal {
+    width: 100%;
+    max-width: 680px;
+    background: #191c22;
+    border: 1px solid #2a2e36;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.application-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-field-full {
+    grid-column: 1 / -1;
+}
+
+.form-field label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #b4bac4;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #343944;
+    border-radius: 10px;
+    background: #12151a;
+    color: #f5f5f5;
+    font: inherit;
+    padding: 12px 14px;
+    outline: none;
+    transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.form-field input {
+    height: 44px;
+    width: 100%;
+}
+
+.form-field textarea {
+    min-height: 110px;
+    resize: vertical;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: #686f7b;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    border-color: #737b8c;
+    background: #15181e;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-top: 4px;
+}
+
+.form-actions button {
+    border: 0;
+    border-radius: 10px;
+    padding: 11px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.modal-close-button{
+    width: 38px;
+    height: 38px;
+    border: 0;
+    border-radius: 10px;
+    background: transparent;
+    color: #ff2222;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.modal-close-button:hover {
+    background: #252932;
+    color: rgb(165, 25, 25);
+}
+.submit-button {
+    background: #1fec6e;
+    border-color: #1fec6e;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: inherit;
+    color: #191c22;
+    border-radius: 10px;
+    padding: 11px 18px;             
+}
+
+.submit-button:hover {
+    cursor: pointer;
+    background: #17ad50;
+}
+
+@media (max-width: 650px) {
+    .modal {
+        padding: 22px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-field-full {
+        grid-column: auto;
+    }
+}
