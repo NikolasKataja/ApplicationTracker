@@ -149,3 +149,11 @@ body {
     background: rgba(239, 68, 68, 0.14);
     color: #fca5a5;
 }
+
+.application-row {
+    cursor: pointer;
+}
+
+.application-row:hover {
+    background: #22262e;
+}

@@ -2,9 +2,10 @@ import type { Application } from "../types/Application";
 
 type ApplicationTableProps = {
     applications: Application[];
+    onApplicationClick: (application: Application) => void;
 };
 
-function ApplicationTable({ applications }: ApplicationTableProps) {
+function ApplicationTable({ applications, onApplicationClick }: ApplicationTableProps) {
     return (
         <section className="application-section">
             <h2>Applications</h2>
@@ -22,7 +23,11 @@ function ApplicationTable({ applications }: ApplicationTableProps) {
 
                 <tbody>
                     {applications.map(application => (
-                        <tr key={application.id}>
+                        <tr 
+                        key={application.id}
+                        onClick={() => onApplicationClick(application)}
+                        className="application-row"
+                        >
                             <td>{application.company}</td>
                             <td>{application.position}</td>
                             <td>{application.location}</td>

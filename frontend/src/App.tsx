@@ -6,10 +6,13 @@ import Toast from "./components/Toast/Toast";
 import StatCard from "./components/StatCard";
 import ApplicationTable from "./components/ApplicationTable";
 import ApplicationForm from "./components/ApplicationForm/ApplicationForm";
+import ApplicationDetails from "./components/ApplicationDetails/ApplicationDetails";
 
 function App() {
 
   const [applications, setApplications] = useState<Application[]>([]);
+
+  const [selectedApplication, setSelectedApplication] = useState<Application | null>(null);
 
   const [showForm, setShowForm] = useState(false);
 
@@ -65,7 +68,17 @@ function App() {
         <StatCard title="Rejected" value={rejectedApplications} />
       </section>
 
-      <ApplicationTable applications={applications} />
+      <ApplicationTable 
+        applications={applications}
+        onApplicationClick={setSelectedApplication}
+      />
+
+      {selectedApplication && (
+        <ApplicationDetails
+          application={selectedApplication}
+          onClose={() => setSelectedApplication(null)}
+        />
+      )}
 
       {showForm && (
         <ApplicationForm
